@@ -19,6 +19,9 @@ def action(cmd):
 
 def not_understood(cmd):
 
+    if not cmd:
+        return action(cmd)
+
     cmd = cmd.lower()
     naughty_words = ['fuck', 'shit', 'cunt', 'asshole', 'bitch', 'dick']
 
